@@ -1,10 +1,12 @@
 package com.allensrmnto.todoapi.todo;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.NamedQuery;
 
 import java.util.Date;
 
 @Entity
+@NamedQuery(name="find_all_todos", query="select todo from Todo todo")
 public class Todo {
     private int todoId;
     private String name;
